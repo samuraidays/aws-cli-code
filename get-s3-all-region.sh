@@ -1,3 +1,3 @@
 #!/bin/sh
 
-aws-vault exec takashi@liveserver -- aws s3 ls
+aws-vault exec $1 -- aws s3 ls
