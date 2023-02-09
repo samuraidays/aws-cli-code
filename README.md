@@ -17,15 +17,15 @@ git clone https://github.com/samuraidays/aws-cli-code.git
 ## Quick start
 
 ```
-## get EC2 resouces from all region
+# get EC2 resouces from all region
 sh get-ec2-all-region.sh [aws-vault profile name]
 
-## get RDS resources from all region
+# get RDS resources from all region
 sh get-rds-all-region.sh [aws-vault profile name]
 
-## get S3 resources from all region
+# get S3 resources from all region
 sh get-s3-all-region.sh [aws-vault profile name]
 
-## get lightsail resources from all region
+# get lightsail resources from all region
 sh get-lightsail-all-region.sh [aws-vault profile name]
 ```
