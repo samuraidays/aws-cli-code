@@ -28,4 +28,7 @@ sh get-s3-all-region.sh [aws-vault profile name]
 
 # get lightsail resources from all region
 sh get-lightsail-all-region.sh [aws-vault profile name]
+
+# get ec2 keypairs resources from all region
+sh get-ec2-keypairs-all-region.sh [aws-vault profile name]
 ```
