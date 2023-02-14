@@ -24,6 +24,11 @@ sa-east-1 \
 
 for region in ${regions[@]}
 do echo "[${region}]"
-aws-vault exec $1 -- aws rds describe-db-instances --query 'DBInstances[].[{ID:DBInstanceIdentifier,Class:DBInstanceClass,Engine:Engine}]' --output text --region ${region} | column -t
+aws-vault exec $1 -- aws rds describe-db-instances --output table --region ${region} \
+    --query 'DBInstances[*].[{
+        ID:DBInstanceIdentifier,
+        Class:DBInstanceClass,
+        Engine:Engine
+        }]'
 echo "---------------------"
 done

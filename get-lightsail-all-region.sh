@@ -20,6 +20,11 @@ eu-north-1 \
 
 for region in ${regions[@]}
 do echo "[${region}]"
-aws-vault exec $1 -- aws lightsail get-instances --query 'instances[].[name, blueprintName, publicIpAddress]' --output text --region ${region} | column -t
+aws-vault exec $1 -- aws lightsail get-instances --output table --region ${region} \
+    --query 'instances[*].{
+        NAME: name,
+        BLUEPRINT: blueprintName,
+        GIP: publicIpAddress
+        }'
 echo "---------------------"
 done

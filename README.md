@@ -1,4 +1,4 @@
-# aws-cli-code
+# get-aws-resouces
 
 ## Preparation
 - Install aws-cli
