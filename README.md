@@ -31,4 +31,10 @@ sh get-lightsail-all-region.sh [aws-vault profile name]
 
 # get ec2 keypairs resources from all region
 sh get-ec2-keypairs-all-region.sh [aws-vault profile name]
+
+# get ec2 eip resources from all region
+sh get-ec2-eip-all-region.sh [aws-vault profile name]
+
+# get ec2 sg resources from all region
+sh get-ec2-sg-all-region.sh [aws-vault profile name]
 ```
